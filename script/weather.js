@@ -19,8 +19,8 @@ async function getAPIKey(){
 // import API_KEY from "./apikey";
 
 async function getWeatherData(city) {
-    // const APIKey = await getAPIKey(); 
-    // const APIKey = 'b476713d2c62a2855f8754e4cc62706c';
+    // const APIKey = await getAPIKey(); Removed because of above comment. 
+    const APIKey = 'b476713d2c62a2855f8754e4cc62706c';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`;
     
     fetch(url)
