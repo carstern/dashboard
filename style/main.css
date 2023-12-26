@@ -81,7 +81,7 @@ transform: scale(1.1);
     margin: 0.3rem;
 }
 
-.dashboard-card {
+.dashboard-card{
 height: 300px;
 width: 300px;
 border: solid black;

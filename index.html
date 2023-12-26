@@ -16,7 +16,7 @@
       <input
         class="dashboard-title"
         id="dashboard-title"
-        placeholder="Your Dashboard (click to change)" />
+        placeholder="click to change" />
     </div>
 
     <!-- 3. Denna del innehåller länkar som användaren sparat. Användaren kan ta bort länkar (3a) 
@@ -49,6 +49,7 @@
       <!-- 5. Denna del får du fritt bestämma vad den ska innehålla.
         Det ska dock vara data från ett externt API och exempelvis kan det vara senaste nyheterna eller aktiekurser. -->
       <div class="dashboard-card">
+        <h2 class="cardName">Random joke</h2>
         <div id="random-joke"></div>
         <button id="joke-button">Skämt</button>
       </div>
@@ -57,7 +58,7 @@
         Tänk en stor textarea bara där det som skrivs sparas hela tiden. 
         Det ska inte finnas flera olika anteckningar utan bara just en yta. -->
         <div class="dashboard-card" id="notes">
-            <h2>Notes</h2>
+            <h2 class="cardName">Notes</h2>
             <div class="notepad-container" id="notepad">
                 <textarea id="noteInput" placeholder="Enter your note"></textarea>
                 <ul id="noteList"></ul>
