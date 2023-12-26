@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- 1. Här ska klockslag och datum synas och klockan ska ändras när tiden ändras utan att sidan laddas om. -->
+    <div class="date-time" id="date-time"></div>
+
+    <!-- 2. Rubriken på sidan ska användaren kunna ändra genom att klicka på den. 
+    När användaren klickat på rubriken blir den redigerbar och ändringarna sparas direkt. -->
+    <div class="information-div" id="information-div">
+      <input
+        class="dashboard-title"
+        id="dashboard-title"
+        placeholder="Your Dashboard (click to change)" />
+    </div>
+
+    <!-- 3. Denna del innehåller länkar som användaren sparat. Användaren kan ta bort länkar (3a) 
+        samt lägga till nya (3b). När användaren lägger till nya länkar ska användaren fylla i länken samt en 
+        rubrik som denna vill ska synas i dashboarden. Extra utmaning: Hämta länkens favicon och visa som bild i dashboarden.-->
+    <div class="dashboard-card-container">
+      <div class="dashboard-card" id="favorite-links">
+        <h2 class="cardName">Favorite Links</h2>
+        <ul>
+          <li class="top-five" id="topFive"><h3>Placeholder</h3></li>
+          <li class="top-five" id="topFive"><h3>Placeholder</h3></li>
+          <li class="top-five" id="topFive"><h3>Placeholder</h3></li>
+          <li class="top-five" id="topFive"><h3>Placeholder</h3></li>
+          <li class="top-five" id="topFive"><h3>Placeholder</h3></li>
+        </ul>
+        <div class="button-div"><button class="new-link">Add link</button></div>
+      </div>
+
+      <!-- 4. Här ska vädret i närtid visas. Denna behöver inte se ut exakt som i skissen men det ska 
+        vara data som hämtas från något öppet API. För att avgöra vilken stad vädret ska visas för 
+        ska browserns geolocation-api användas. Extra utmaning: Gör så att användaren kan anpassa orten som visas-->
+        <div class="dashboard-card" id="weather-information">
+            <h2 class="cardName">Weather</h2>
+            <label for="city">Enter City:</label>
+            <input type="text" id="city" name="city" />
+            <div class="weather-container" id="weatherContainer"></div>
+            <button id="getWeatherBtn">Get Weather</button>
+        </div>
+
+      <!-- 5. Denna del får du fritt bestämma vad den ska innehålla.
+        Det ska dock vara data från ett externt API och exempelvis kan det vara senaste nyheterna eller aktiekurser. -->
+      <div class="dashboard-card">
+        <div id="random-joke"></div>
+        <button id="joke-button">Skämt</button>
+      </div>
+
+      <!-- 6. I den här delen ska användaren kunna skriva snabba anteckningar. 
+        Tänk en stor textarea bara där det som skrivs sparas hela tiden. 
+        Det ska inte finnas flera olika anteckningar utan bara just en yta. -->
+        <div class="dashboard-card" id="notes">
+            <h2>Notes</h2>
+            <div class="notepad-container" id="notepad">
+                <textarea id="noteInput" placeholder="Enter your note"></textarea>
+                <ul id="noteList"></ul>
+            </div>
+        </div>
+
+    <!-- 7. När användaren klickar på denna knapp ska en randomiserad bild från Unsplash API 
+        hämtas och läggas in som bakgrund på dashboarden. -->
+    <div class="random-picture" id="random-picture">
+      <button class="generateImage">Generera bild</button>
+    </div>
+  
+    <script src="./script/time.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/jokes.js"></script>
+    <script src="./script/weather.js"></script>
+    <script src="./script/notes.js"></script>
+</body>
+</html>

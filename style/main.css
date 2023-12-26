@@ -1,0 +1,130 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+:root {
+    --primary-color: rgb(50, 127, 250); 
+    --secondary-color: rgba(131, 224, 245, 0.826);
+    --third-color:rgb(80, 118, 179); 
+  }
+  
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    gap: 1rem;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.date-time {
+    padding: 1rem;
+    margin: 10px auto;
+    width: fit-content;
+    height: fit-content;
+    border: solid black;
+    background-color: var(--third-color);
+}
+
+.information-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.information-div:hover {
+transform: scale(1.1);
+}
+.dashboard-title {
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    color: var(--third-color);
+    font-weight: 200;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    letter-spacing: 0.15rem;
+}
+
+.dashboard-card-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.top-five {
+    list-style: none;
+    margin: 0.3rem;
+}
+
+.dashboard-card {
+height: 300px;
+width: 300px;
+border: solid black;
+background-color: var(--third-color);
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+
+button {
+background-color: var(--secondary-color);
+}
+
+/* JOKE */
+#random-joke {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NOTEPAD */
+
+.notepad-container {
+    width: 100%;
+    height: 80%; 
+    display: flex;
+    justify-content: center;
+}
+
+#noteInput {
+    width: 100%;
+    height: 100%;
+    resize: none; /* Prevent textarea from being resized */
+    /* Other styles for your textarea */
+}
+/* PICTURE PART */
+.random-picture {
+padding: 1rem;
+height: 40px;
+width: fit-content;
+border: solid black;
+background-color: var(--third-color);
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
