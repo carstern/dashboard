@@ -33,6 +33,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+
 }
 
 .date-time {
@@ -68,7 +69,8 @@ transform: scale(1.1);
 }
 
 .dashboard-card-container {
-    padding: 1rem;
+    padding: 4px;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -104,7 +106,7 @@ background-color: var(--secondary-color);
 /* NOTEPAD */
 
 .notepad-container {
-    width: 100%;
+    width: 90%;
     height: 80%; 
     display: flex;
     justify-content: center;
@@ -113,14 +115,15 @@ background-color: var(--secondary-color);
 #noteInput {
     width: 100%;
     height: 100%;
-    resize: none; /* Prevent textarea from being resized */
-    /* Other styles for your textarea */
+    resize: none;
 }
+
+
 /* PICTURE PART */
 .random-picture {
 padding: 1rem;
-height: 40px;
-width: fit-content;
+height: 300px;
+width: 300px;
 border: solid black;
 background-color: var(--third-color);
 display: flex;
