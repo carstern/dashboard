@@ -1,0 +1,16 @@
+{
+	"telemetryDisabled": false,
+	"cliId": "3f2a3171-fffb-440f-bcee-501b198d9c34",
+	"userId": "655f248672f734663dd2f330",
+	"users": {
+		"655f248672f734663dd2f330": {
+			"id": "655f248672f734663dd2f330",
+			"name": null,
+			"email": "caroline.edgren88@gmail.com",
+			"auth": {
+				"token": "nfc_FwFPmXovYbWWFx29DSq5HQ1LZhrTKEh80a4f",
+				"github": {}
+			}
+		}
+	}
+}

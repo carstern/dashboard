@@ -16,10 +16,10 @@ async function getAPIKey(){
         console.log(`HTTP error message: ${response.status}`);
     }
 };*/
-import API_KEY from "./apikey";
+// import API_KEY from "./apikey";
 
 async function getWeatherData(city) {
-    const APIKey = await getAPIKey(); 
+    // const APIKey = await getAPIKey(); 
     // const APIKey = 'b476713d2c62a2855f8754e4cc62706c';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`;
     
