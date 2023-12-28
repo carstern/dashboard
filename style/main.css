@@ -14,7 +14,7 @@
   }
   
 
-body {
+/* body {
     overflow-x: hidden;
     width: 100vw;
     background-size: cover;
@@ -23,18 +23,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-main {
-    width: 100%;
-    gap: 1rem;    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-
-}
+} */
 
 .date-time {
     padding: 1rem;
@@ -122,14 +111,62 @@ background-color: var(--secondary-color);
 /* PICTURE PART */
 .random-picture {
 padding: 1rem;
-margin: 1rem;
+margin: 0 auto;
 height: max-content;
 width: fit-content;
 border: solid black;
 background-color: var(--third-color);
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: center;
 align-items: center;
 position: relative;
+}
+/* Modal */
+.modal-container {
+    display: none;
+}
+.modal {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    height: 150px;
+    width: 200px;
+    transform: translate(-50%, 50%);
+    border: 1px solid black;
+    border-radius: 10%;
+    background-color: var(--primary-color);
+    width: 300px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    }
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.show-modal {
+    display: flex;
+}
+
+.delete-button {
+    margin-left: 1rem;
 }
