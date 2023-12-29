@@ -34,7 +34,7 @@
         <div class="button-div">
           <button class="new-link" id="addLink">Add link</button>
         </div>
-      </div>
+      
 
       <!-- Modal -->
       <section class="modal-container" id="modal-container">
@@ -47,7 +47,7 @@
           </div>
             <button class="save-button" id="save-modal">Save</button>
         </div>
-      </section>
+      </section></div>
 
       <!-- 4. Här ska vädret i närtid visas. Denna behöver inte se ut exakt som i skissen men det ska 
         vara data som hämtas från något öppet API. För att avgöra vilken stad vädret ska visas för 
@@ -83,8 +83,13 @@
     <!-- 7. När användaren klickar på denna knapp ska en randomiserad bild från Unsplash API 
         hämtas och läggas in som bakgrund på dashboarden. -->
     <div class="random-picture" id="random-picture">
-      <button class="generateImage">Generera bild</button>
+        <div class="background-div">
+            <button id="swtichBg" class="new-bg-btn">New background</button>
+            <input type="text" id="keyword" placeholder="background keyword" class="keyword-input">
+          </div>
     </div>
+
+
 
     <script src="./script/time.js"></script>
     <script src="./script/main.js"></script>
@@ -92,5 +97,6 @@
     <script src="./script/weather.js"></script>
     <script src="./script/notes.js"></script>
     <script src="./script/favlinks.js"></script>
+    <script src="./script/background.js"></script>
   </body>
 </html>

@@ -17,14 +17,10 @@ dashboardTitle.addEventListener("keydown", function (event) {
   }
 });
 
-// Clear input on click
-dashboardTitle.addEventListener("click", function () {
-  dashboardTitle.value = " ";
-});
-
 // Save the input as new dashboard title
 function saveNewTitle() {
   const enteredTitle = dashboardTitle.value;
   localStorage.setItem("dashboardTitle", enteredTitle);
 }
 // _______ END DASHBOARD TITLE _______ \\
+
