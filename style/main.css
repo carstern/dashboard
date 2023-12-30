@@ -154,6 +154,7 @@ background-color: var(--secondary-color);
 padding: 1rem;
 margin: 0 auto;
 margin-bottom: 1rem;
+margin-top: 1rem;
 height: max-content;
 width: fit-content;
 border: solid black;
@@ -196,6 +197,7 @@ position: relative;
 .modal-header .title {
     font-size: 1.25rem;
     font-weight: bold;
+    margin: 0.4rem;
 }
 .modal-header .close-button {
     cursor: pointer;

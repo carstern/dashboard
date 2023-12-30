@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style/main.css" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <script
-    src="https://kit.fontawesome.com/ad20af66a9.js"
-    crossorigin="anonymous"></script>
+      src="https://kit.fontawesome.com/ad20af66a9.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- 1. Här ska klockslag och datum synas och klockan ska ändras när tiden ändras utan att sidan laddas om. -->
@@ -23,69 +23,67 @@
         placeholder="click to change" />
     </div>
 
-    
-<div class="cards-container">
-
-<div class="card">
-    <div class="card-title">Favorites</div>
-    <div class="card-input">
-        <div id="fav-links"></div>
-         <button class="new-link" id="addLink">Add link</button>
-    </div>
-</div>
-
-
-<div class="card">
-    <div class="card-title">Weather</div>
-    <div class="card-input">
-        <label for="city">Enter City:</label>
-        <input type="text" id="city" name="city" />
-        <div class="weather-container" id="weatherContainer"></div>
-        <button id="getWeatherBtn">Get Weather</button>
-    </div>
-</div>
-<div class="card">
-    <div class="card-title">Joke</div>
-    <div class="card-input">        
-    <div id="random-joke"></div>
-    <button id="joke-button">Skämt</button></div>
-</div>
-
-<div class="card">
-    <div class="card-title">Notes</div>
-    <div class="card-input">       
-         <div class="notepad-container" id="notepad">
-          <textarea id="noteInput" placeholder="Enter your note"></textarea>
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-title">Favorites</div>
+        <div class="card-input">
+          <div id="fav-links"></div>
+          <button class="new-link" id="addLink">Add link</button>
         </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Weather</div>
+        <div class="card-input">
+          <label for="city">Enter City:</label>
+          <input type="text" id="city" name="city" />
+          <div class="weather-container" id="weatherContainer"></div>
+          <button id="getWeatherBtn">Get Weather</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Joke</div>
+        <div class="card-input">
+          <div id="random-joke"></div>
+          <button id="joke-button">Skämt</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Notes</div>
+        <div class="card-input">
+          <div class="notepad-container" id="notepad">
+            <textarea id="noteInput" placeholder="Enter your note"></textarea>
+          </div>
           <button id="copyButton">Copy to Clipboard</button>
-</div>
-    </div>
-    
-    
-        
-            <!-- Modal -->
-      <section class="modal-container" id="modal-container">
-        <div class="modal" id="modal">
-          <div class="modal-header">
-            <div class="title">Add new favorite <button class="close-button" id="close-modal">&times;</button></div>
-          </div>
-          <div class="modal-body">
-            <input type="text" />
-          </div>
-            <button class="save-button" id="save-modal">Save</button>
         </div>
-      </section>
-
-    <!-- 7. När användaren klickar på denna knapp ska en randomiserad bild från Unsplash API 
-        hämtas och läggas in som bakgrund på dashboarden. -->
-    <div class="random-picture" id="random-picture">
-        <div class="background-div">
-            <button id="swtichBg" class="new-bg-btn">New background</button>
-            <input type="text" id="keyword" placeholder="background keyword" class="keyword-input">
-          </div>
+      </div>
     </div>
 
+    <!-- Modal -->
+    <section class="modal-container" id="modal-container">
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <h2 class="title">
+            Add new favorite</h2> 
+        </div>
+        <div class="modal-body">
+          <input type="text" />
+        </div>
+        <div><button class="close-button" id="close-modal">Close</button> <button class="save-button" id="save-modal">Save</button></div>
+      </div>
+    </section>
 
+    <div class="random-picture" id="random-picture">
+      <div class="background-div">
+        <button id="swtichBg" class="new-bg-btn">New background</button>
+        <input
+          type="text"
+          id="keyword"
+          placeholder="background keyword"
+          class="keyword-input" />
+      </div>
+    </div>
 
     <script src="./script/time.js"></script>
     <script src="./script/main.js"></script>
@@ -95,4 +93,4 @@
     <script src="./script/favlinks.js"></script>
     <script src="./script/background.js"></script>
   </body>
-  </html>
+</html>
