@@ -25,10 +25,10 @@ async function getAPIKey(){
 
 async function getWeatherData(city) {
     // const APIKey = await getAPIKey(); Removed because of above comment. 
-    const APIKey = 'b476713d2c62a2855f8754e4cc62706c';
+    const APIKey = 'b476713d2c62a2855f8754e4cc62706c'; // Chose to leave this in the open as I could't solve it without adding on frameworks.
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`;
     
-    fetch(url)
+    fetch(url) // Added error handling 
     .then(response => {
         if (!response.ok) {
             throw new Error('Invalid input');
