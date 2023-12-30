@@ -17,7 +17,7 @@ function copyToClipboard() {
     navigator.clipboard.writeText(selectedText);
   };
   
-// Display existing notes on page load
+// Display existing notes on page load as an extra thing (Mainly did this as it I had buttons on all cards except this one)
 function displayNotes() {
     const notes = localStorage.getItem('notes');
     if (notes) {
