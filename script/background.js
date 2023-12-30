@@ -1,3 +1,6 @@
+/* 7. När användaren klickar på denna knapp ska en randomiserad bild från Unsplash API 
+hämtas och läggas in som bakgrund på dashboarden. */
+
 // _______ BACKGROUND IMAGE ______ \\
 const randomPic = document.querySelector("#swtichBg");
 const keyword = document.querySelector("#keyword");
