@@ -2,12 +2,12 @@
         samt lägga till nya (3b). När användaren lägger till nya länkar ska användaren fylla i länken samt en 
         rubrik som denna vill ska synas i dashboarden. Extra utmaning: Hämta länkens favicon och visa som bild i dashboarden.*/
 
+//MODAL
 // Connect to html
 const favoriteLinks = document.getElementById("fav-links");
 const modal = document.getElementById("modal-container");
 const addLink = document.getElementById("addLink");
 const closeModal = document.getElementById("close-modal");
-
 
 addLink.addEventListener("click", function () {
   modal.classList.add("show-modal");
@@ -31,8 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.remove("show-modal");
   });
 
-  
+  // END MODAL
 
+  // FAVORITE LINKS
   // Function to load items from localStorage
   function loadItemsFromStorage() {
     const savedItems = localStorage.getItem("favLinks");
@@ -49,16 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
       button.addEventListener("click", function () {
         const listItem = button.closest("li"); // Find the closest <li> parent
         const favLinks = document.getElementById("fav-links");
-  
+
         if (listItem && favLinks.contains(listItem)) {
-          favLinks.removeChild(listItem); // Remove if it's a child of fav-links
+          favLinks.removeChild(listItem); // Remove if it's a child of fav-links - Had issues with removechild but with the && above I could compare and remove.
           updateLocalStorage(); // Update localStorage after removing item
         }
       });
     });
   }
-  
-  
 
   // Function to collect links if there is any in localStorage
   function updateLocalStorage() {
@@ -70,37 +69,80 @@ document.addEventListener("DOMContentLoaded", function () {
   const inputField = document.querySelector(".modal-body input");
 
   saveButton.addEventListener("click", function () {
-    const linkValue = inputField.value.trim(); 
-    if (linkValue !== "") {
-      const newListItem = document.createElement("li"); // Create a new list item if the input field is not empty
+    const [nameInput, urlInput] = [...document.querySelectorAll(".modal-body input")].map(input => input.value.trim());
+
+    
+    if (nameInput !== "" && urlInput !== "") {
+      const currentLinks = favLinks.querySelectorAll("li").length;
   
-      // Create an anchor element for the URL
-      const link = document.createElement("a");
-      link.href = linkValue; // Set the URL as the href attribute
-      link.textContent = linkValue; // Set the displayed text of the link
+      // Add limit of 5 links
+      if (currentLinks >= 5) {
+        alert("Sorry, you can only add 5 links.");
+        return; // Stop execution if the limit is reached
+      }
+  
+      const newListItem = document.createElement("li");
+  
+      // Create and append the icon based on the URL
+      const icon = createIconElement(urlInput);
+      newListItem.appendChild(icon);
       
-      newListItem.appendChild(link); // Append the link to the list item
-  
+      const nameLink = document.createElement("a");
+      nameLink.href = "#"; // Update the href to point to a hash initially
+      nameLink.textContent = nameInput;
+      
+      nameLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the default action (navigating to a hash)
+        window.open(urlInput, "_blank");
+      });
+      
+      newListItem.appendChild(nameLink);
+      
       // Create the delete button with an icon next to the link
-      const deleteButton = document.createElement("button"); 
-      const icon = document.createElement("i"); 
-      icon.className = "fa-solid fa-x";
-      deleteButton.appendChild(icon);
-      deleteButton.classList = "delete-button"; 
-  
-      // Append the delete button to the list item
-      newListItem.appendChild(deleteButton);
-  
-      // Append the list item to the favLinks div
+      const deleteButton = document.createElement("button");
+      const deletebtn = document.createElement("i");
+      deletebtn.className = "fa-solid fa-x";
+      deleteButton.appendChild(deletebtn);
+      deleteButton.classList = "delete-button";
+      
+      // Appending the button and links
+      newListItem.appendChild(deleteButton);   
       favLinks.appendChild(newListItem); 
       favLinks.classList = "fav-links";
-      inputField.value = ""; // Reset the input field value to default after adding
   
-      updateLocalStorage(); 
-      setDeleteButtonListeners(); 
+      
+ document.querySelectorAll(".modal-body input").forEach(input => {
+  input.value = "";}); // Clear inputfields 
+  
+      updateLocalStorage();
+      setDeleteButtonListeners();
+
+      modal.classList.remove("show-modal"); // Closing the modal after saving a new link
     }
   });
-  
 });
+    
+  // END FAVORIT LINKS
 
-//Load icons if links contain known domain.
+  // ADD ICONS TO LINKS BASED ON MATCHING WORDS - Couldn't get it working with any icons except the X...
+  function createIconElement(linkValue) {
+    const iconClasses = {
+      google: "fa-brands fa-google", // When I use "fa-solid fa-x" the icon works.. 
+      github: "fa-brands fa-github",
+      hemnet: "fa-solid fa-home",
+      default: "fa-solid fa-face-smile"
+    };
+  
+    for (const keyword in iconClasses) {
+      if (linkValue.includes(keyword)) {
+        const icon = document.createElement("i");
+        icon.className = iconClasses[keyword];
+        return icon;
+      }
+    }
+  
+    // If no keyword matches, return the default icon
+    const defaultIcon = document.createElement("i");
+    defaultIcon.className = iconClasses.default;
+    return defaultIcon;
+  }

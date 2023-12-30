@@ -83,7 +83,7 @@ gap: 1rem;
     }
 
 .card-title {
-    height: 20%;
+    height: 15%;
     margin-right: 2rem;
     margin-left: 2rem;
     font-size: 2rem;
@@ -110,15 +110,26 @@ background-color: var(--secondary-color);
 
 .fav-links {
     list-style: none;
-    margin: 1rem;
+    /* overflow: scroll; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    
 }
 
 a {
     color: black;
     font-style: italic;
+    
+    }
+
+li {
+    list-style: none;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    width: 100%;
+    border: 1px dotted black;
+    text-align: center;
 }
 /* END FAVORITE LINKS */
 
@@ -178,12 +189,10 @@ a {
     font-weight: bold;
     margin: 0.4rem;
 }
-.modal-header .close-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    font-size: 1.25rem;
-    font-weight: bold;
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .show-modal {
     display: flex;
