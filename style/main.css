@@ -8,22 +8,16 @@
 }
 
 :root {
-    --primary-color: rgb(50, 127, 250); 
-    --secondary-color: rgb(59, 88, 191);
-    --third-color:rgb(80, 118, 179); 
+    --primary-color: rgb(175, 202, 245); 
+    --secondary-color: rgb(114, 119, 137);
+    --third-color:rgba(121, 143, 177, 0.883); 
   }
   
-
-/* body {
-    overflow-x: hidden;
-    width: 100vw;
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-} */
+    }
 
 .date-time {
     padding: 1rem;
@@ -48,7 +42,8 @@
     border: none;
     min-width: 60%;
     max-width: fit-content;
-    background-color: transparent;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
     color: white;
     font-weight: 200;
     cursor: pointer;
@@ -122,7 +117,6 @@ justify-content: center;
 align-items: center;
 position: relative;
 }
-
 
 /* Modal */
 .modal-container {

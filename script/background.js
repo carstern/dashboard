@@ -13,17 +13,17 @@ if (!localStorage.getItem("randomURL")) {
 }
 
 async function randomize() {
-  const query = keyword.value !== "" ? keyword.value : "animals"; // Default query if user input is empty
-  const response = await fetch(
-    `https://api.unsplash.com/photos/random?client_id=rkSeKPVVUyB4tduVp36cQKnRHO9tvCENNaIQBkJluYE&query=${query}`
-  );
-
-  if (response.ok) {
-    const data = await response.json();
-    document.body.style.backgroundImage = `url("${data.urls.full}")`;
-    document.body.style.backgroundSize = "cover"; // Set the background size to contain
-    document.body.style.backgroundAttachment = "fixed"; // Optional: Set the background attachment to fixed for a fixed background
-    localStorage.setItem("randomURL", JSON.stringify(data.urls.full)); // Store the URL as a string
+    const query = keyword.value !== "" ? keyword.value : "animals"; // Default query if user input is empty
+    const response = await fetch(
+      `https://api.unsplash.com/photos/random?client_id=rkSeKPVVUyB4tduVp36cQKnRHO9tvCENNaIQBkJluYE&query=${query}`
+    );
+  
+    if (response.ok) {
+      const data = await response.json();
+      const imageUrl = data.urls.full;
+  
+      document.body.style.backgroundImage = `url("${imageUrl}")`;
+      localStorage.setItem("randomURL", JSON.stringify(imageUrl)); // Store the URL as a string
+    }
   }
-}
-
+  
