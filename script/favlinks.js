@@ -146,3 +146,4 @@ document.addEventListener("DOMContentLoaded", function () {
     defaultIcon.className = iconClasses.default;
     return defaultIcon;
   }
+  // END ADD ICONS TO LINKS BASED ON MATCHING WORDS
