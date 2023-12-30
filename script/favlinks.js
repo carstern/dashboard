@@ -47,12 +47,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const deleteButtons = document.querySelectorAll(".delete-button");
     deleteButtons.forEach((button) => {
       button.addEventListener("click", function () {
-        const listItem = button.parentElement;
-        listItem.parentElement.removeChild(listItem);
-        updateLocalStorage(); // Update localStorage after removing item
+        const listItem = button.closest("li"); // Find the closest <li> parent
+        const favLinks = document.getElementById("fav-links");
+  
+        if (listItem && favLinks.contains(listItem)) {
+          favLinks.removeChild(listItem); // Remove if it's a child of fav-links
+          updateLocalStorage(); // Update localStorage after removing item
+        }
       });
     });
   }
+  
+  
 
   // Function to collect links if there is any in localStorage
   function updateLocalStorage() {
