@@ -1,3 +1,7 @@
+/* 6. I den här delen ska användaren kunna skriva snabba anteckningar. 
+ Tänk en stor textarea bara där det som skrivs sparas hela tiden. 
+ Det ska inte finnas flera olika anteckningar utan bara just en yta.*/
+
 // Function to save notes to localStorage and update textarea
 function saveAndUpdateNotes() {
     const noteInput = document.getElementById('noteInput').value;
@@ -11,7 +15,7 @@ function copyToClipboard() {
   
     const selectedText = noteInput.value;
     navigator.clipboard.writeText(selectedText);
-  }
+  };
   
 // Display existing notes on page load
 function displayNotes() {
