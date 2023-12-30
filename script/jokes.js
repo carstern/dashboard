@@ -1,3 +1,7 @@
+/* 5. Denna del får du fritt bestämma vad den ska innehålla.
+Det ska dock vara data från ett externt API och exempelvis 
+kan det vara senaste nyheterna eller aktiekurser. -->*/
+
 // Fetches a random joke upon click
 // Used an open API with no authentication necessary
 

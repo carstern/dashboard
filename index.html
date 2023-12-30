@@ -23,11 +23,8 @@
         placeholder="click to change" />
     </div>
 
-    <!-- 3. Denna del innehåller länkar som användaren sparat. Användaren kan ta bort länkar (3a) 
-        samt lägga till nya (3b). När användaren lägger till nya länkar ska användaren fylla i länken samt en 
-        rubrik som denna vill ska synas i dashboarden. Extra utmaning: Hämta länkens favicon och visa som bild i dashboarden.-->
     
-    <div class="cards-container">
+<div class="cards-container">
 
 <div class="card">
     <div class="card-title">Favorites</div>
@@ -36,9 +33,7 @@
          <button class="new-link" id="addLink">Add link</button>
     </div>
 </div>
-      <!-- 4. Här ska vädret i närtid visas. Denna behöver inte se ut exakt som i skissen men det ska 
-        vara data som hämtas från något öppet API. För att avgöra vilken stad vädret ska visas för 
-        ska browserns geolocation-api användas. Extra utmaning: Gör så att användaren kan anpassa orten som visas-->
+
 
 <div class="card">
     <div class="card-title">Weather</div>
@@ -49,28 +44,25 @@
         <button id="getWeatherBtn">Get Weather</button>
     </div>
 </div>
-
-      <!-- 5. Denna del får du fritt bestämma vad den ska innehålla.
-        Det ska dock vara data från ett externt API och exempelvis kan det vara senaste nyheterna eller aktiekurser. -->
-
-
 <div class="card">
     <div class="card-title">Joke</div>
-    <div class="card-input">        <div id="random-joke"></div>
+    <div class="card-input">        
+    <div id="random-joke"></div>
     <button id="joke-button">Skämt</button></div>
 </div>
 
-
 <div class="card">
     <div class="card-title">Notes</div>
-    <div class="card-input">        <div class="notepad-container" id="notepad">
+    <div class="card-input">       
+         <div class="notepad-container" id="notepad">
           <textarea id="noteInput" placeholder="Enter your note"></textarea>
-        </div><button id="copyButton">Copy to Clipboard</button>
+        </div>
+          <button id="copyButton">Copy to Clipboard</button>
 </div>
     </div>
     
     
-        <div class="dashboard-card-container"> 
+        
             <!-- Modal -->
       <section class="modal-container" id="modal-container">
         <div class="modal" id="modal">
@@ -103,4 +95,4 @@
     <script src="./script/favlinks.js"></script>
     <script src="./script/background.js"></script>
   </body>
-</html>
+  </html>

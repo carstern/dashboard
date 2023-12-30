@@ -1,3 +1,7 @@
+/* 3. Denna del innehåller länkar som användaren sparat. Användaren kan ta bort länkar (3a) 
+        samt lägga till nya (3b). När användaren lägger till nya länkar ska användaren fylla i länken samt en 
+        rubrik som denna vill ska synas i dashboarden. Extra utmaning: Hämta länkens favicon och visa som bild i dashboarden.*/
+
 // Connect to html
 const favoriteLinks = document.getElementById("fav-links");
 const modal = document.getElementById("modal-container");
