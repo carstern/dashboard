@@ -63,25 +63,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const linkValue = inputField.value.trim(); 
     if (linkValue !== "") {
       const newListItem = document.createElement("li"); // Create a new list item if the input field is not empty
-      newListItem.textContent = linkValue; 
-
-      //create the deletebutton with an icon next to the link
+  
+      // Create an anchor element for the URL
+      const link = document.createElement("a");
+      link.href = linkValue; // Set the URL as the href attribute
+      link.textContent = linkValue; // Set the displayed text of the link
+      
+      newListItem.appendChild(link); // Append the link to the list item
+  
+      // Create the delete button with an icon next to the link
       const deleteButton = document.createElement("button"); 
       const icon = document.createElement("i"); 
       icon.className = "fa-solid fa-x";
       deleteButton.appendChild(icon);
       deleteButton.classList = "delete-button"; 
-
-      //append the creations to the div
+  
+      // Append the delete button to the list item
       newListItem.appendChild(deleteButton);
+  
+      // Append the list item to the favLinks div
       favLinks.appendChild(newListItem); 
       favLinks.classList = "fav-links";
       inputField.value = ""; // Reset the input field value to default after adding
-
+  
       updateLocalStorage(); 
       setDeleteButtonListeners(); 
     }
   });
+  
 });
 
 //Load icons if links contain known domain.

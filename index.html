@@ -26,17 +26,54 @@
     <!-- 3. Denna del innehåller länkar som användaren sparat. Användaren kan ta bort länkar (3a) 
         samt lägga till nya (3b). När användaren lägger till nya länkar ska användaren fylla i länken samt en 
         rubrik som denna vill ska synas i dashboarden. Extra utmaning: Hämta länkens favicon och visa som bild i dashboarden.-->
-    <div class="dashboard-card-container">
-      <div class="dashboard-card">
-        <h2 class="cardName">Favorite Links</h2>
+    
+    <div class="cards-container">
+
+<div class="card">
+    <div class="card-title">Favorites</div>
+    <div class="card-input">
         <div id="fav-links"></div>
+         <button class="new-link" id="addLink">Add link</button>
+    </div>
+</div>
+      <!-- 4. Här ska vädret i närtid visas. Denna behöver inte se ut exakt som i skissen men det ska 
+        vara data som hämtas från något öppet API. För att avgöra vilken stad vädret ska visas för 
+        ska browserns geolocation-api användas. Extra utmaning: Gör så att användaren kan anpassa orten som visas-->
 
-        <div class="button-div">
-          <button class="new-link" id="addLink">Add link</button>
-        </div>
-      
+<div class="card">
+    <div class="card-title">Weather</div>
+    <div class="card-input">
+        <label for="city">Enter City:</label>
+        <input type="text" id="city" name="city" />
+        <div class="weather-container" id="weatherContainer"></div>
+        <button id="getWeatherBtn">Get Weather</button>
+    </div>
+</div>
 
-      <!-- Modal -->
+      <!-- 5. Denna del får du fritt bestämma vad den ska innehålla.
+        Det ska dock vara data från ett externt API och exempelvis kan det vara senaste nyheterna eller aktiekurser. -->
+
+
+<div class="card">
+    <div class="card-title">Joke</div>
+    <div class="card-input">        <div id="random-joke"></div>
+    <button id="joke-button">Skämt</button></div>
+</div>
+      <!-- 6. I den här delen ska användaren kunna skriva snabba anteckningar. 
+        Tänk en stor textarea bara där det som skrivs sparas hela tiden. 
+        Det ska inte finnas flera olika anteckningar utan bara just en yta. -->
+
+<div class="card">
+    <div class="card-title">Notes</div>
+    <div class="card-input">        <div class="notepad-container" id="notepad">
+          <textarea id="noteInput" placeholder="Enter your note"></textarea>
+        </div><button id="copyButton">Copy to Clipboard</button>
+</div>
+    </div>
+    
+    
+        <div class="dashboard-card-container"> 
+            <!-- Modal -->
       <section class="modal-container" id="modal-container">
         <div class="modal" id="modal">
           <div class="modal-header">
@@ -47,38 +84,7 @@
           </div>
             <button class="save-button" id="save-modal">Save</button>
         </div>
-      </section></div>
-
-      <!-- 4. Här ska vädret i närtid visas. Denna behöver inte se ut exakt som i skissen men det ska 
-        vara data som hämtas från något öppet API. För att avgöra vilken stad vädret ska visas för 
-        ska browserns geolocation-api användas. Extra utmaning: Gör så att användaren kan anpassa orten som visas-->
-      <div class="dashboard-card" id="weather-information">
-        <h2 class="cardName">Weather</h2>
-        <label for="city">Enter City:</label>
-        <input type="text" id="city" name="city" />
-        <div class="weather-container" id="weatherContainer"></div>
-        <button id="getWeatherBtn">Get Weather</button>
-      </div>
-
-      <!-- 5. Denna del får du fritt bestämma vad den ska innehålla.
-        Det ska dock vara data från ett externt API och exempelvis kan det vara senaste nyheterna eller aktiekurser. -->
-      <div class="dashboard-card">
-        <h2 class="cardName">Random joke</h2>
-        <div id="random-joke"></div>
-        <button id="joke-button">Skämt</button>
-      </div>
-
-      <!-- 6. I den här delen ska användaren kunna skriva snabba anteckningar. 
-        Tänk en stor textarea bara där det som skrivs sparas hela tiden. 
-        Det ska inte finnas flera olika anteckningar utan bara just en yta. -->
-      <div class="dashboard-card" id="notes">
-        <h2 class="cardName">Notes</h2>
-        <div class="notepad-container" id="notepad">
-          <textarea id="noteInput" placeholder="Enter your note"></textarea>
-          <ul id="noteList"></ul>
-        </div>
-      </div>
-    </div>
+      </section>
 
     <!-- 7. När användaren klickar på denna knapp ska en randomiserad bild från Unsplash API 
         hämtas och läggas in som bakgrund på dashboarden. -->

@@ -1,3 +1,8 @@
+// <!-- 4. Här ska vädret i närtid visas. Denna behöver inte se ut exakt som i skissen men det ska 
+// vara data som hämtas från något öppet API. För att avgöra vilken stad vädret ska visas för 
+// ska browserns geolocation-api användas. Extra utmaning: Gör så att användaren kan anpassa orten som visas-->
+
+
 /* 
 Commenting out the import and getAPI key function below as I could not get it working even when just testing it. 
 As we are to do this asignment vanilla, I will have the API key visible.

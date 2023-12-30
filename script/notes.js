@@ -4,6 +4,15 @@ function saveAndUpdateNotes() {
     localStorage.setItem('notes', noteInput);
 }
 
+// Function to copy notes to clipboard
+function copyToClipboard() {
+    const noteInput = document.getElementById('noteInput');
+    noteInput.select();
+  
+    const selectedText = noteInput.value;
+    navigator.clipboard.writeText(selectedText);
+  }
+  
 // Display existing notes on page load
 function displayNotes() {
     const notes = localStorage.getItem('notes');
@@ -18,3 +27,7 @@ noteInput.addEventListener('input', saveAndUpdateNotes);
 
 // Display existing notes on page load
 displayNotes();
+
+// Event listener for the "Copy to Clipboard" button
+const copyButton = document.getElementById('copyButton');
+copyButton.addEventListener('click', copyToClipboard);
