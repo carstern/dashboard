@@ -23,4 +23,3 @@ function saveNewTitle() {
   localStorage.setItem("dashboardTitle", enteredTitle);
 }
 // _______ END DASHBOARD TITLE _______ \\
-
