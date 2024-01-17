@@ -93,11 +93,11 @@ function getLocationAndWeather() {
     }
 }
 
+// Call getLocationAndWeather when the page loads to check or ask for permission
+window.addEventListener('load', getLocationAndWeather);
+
 const getWeatherBtn = document.getElementById('getWeatherBtn');
 getWeatherBtn.addEventListener('click', function () {
     const cityInput = document.getElementById('city').value.trim();
     getWeatherData({ type: 'city', query: cityInput });
 });
-
-const getWeatherByLocationBtn = document.getElementById('getWeatherByLocationBtn');
-getWeatherByLocationBtn.addEventListener('click', getLocationAndWeather);
