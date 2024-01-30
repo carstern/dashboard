@@ -23,3 +23,10 @@ function saveNewTitle() {
   localStorage.setItem("dashboardTitle", enteredTitle);
 }
 // _______ END DASHBOARD TITLE _______ \\
+
+
+// Google custom tag 
+const jokeBtn = document.getElementById('joke-button');
+jokeBtn.addEventListener('click', function(){
+  gtag('event')
+})
