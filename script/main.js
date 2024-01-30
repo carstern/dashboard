@@ -1,4 +1,27 @@
 // ______ DASHBOARD CHANGE-TITLE FUNCTIONALITY _______\\
+
+
+// Google custom tag 
+const jokeBtn = document.getElementById('joke-button');
+jokeBtn.addEventListener('click', function(){
+  gtag('event', 'jokebtn_click', {
+    'event_category': 'Button Click',
+    'event_label': 'Joke Generator',
+    'value': 1
+  });
+});
+
+// Lägg till detta script på varje sida, använda och testa på cv sidan?
+const links = document.querySelectorAll('a');
+links.forEach(function(link){
+  link.addEventListener('click', function(){
+    gtag('event', 'page_transition', {
+      'event_category': 'Navigation',
+      'event_label': link.getAttribute('href')
+    });
+  });
+});
+
 // Connect to html
 const dashboardTitle = document.getElementById("dashboard-title");
 
@@ -24,9 +47,3 @@ function saveNewTitle() {
 }
 // _______ END DASHBOARD TITLE _______ \\
 
-
-// Google custom tag 
-const jokeBtn = document.getElementById('joke-button');
-jokeBtn.addEventListener('click', function(){
-  gtag('event')
-})
