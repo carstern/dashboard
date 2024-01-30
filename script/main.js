@@ -2,8 +2,8 @@
 
 
 // Google custom tag 
-const jokeBtn = document.getElementById('joke-button');
-jokeBtn.addEventListener('click', function(){
+const jokeButton = document.getElementById('joke-button');
+jokeButton.addEventListener('click', function(){
   gtag('event', 'jokebtn_click', {
     'event_category': 'Button Click',
     'event_label': 'Joke Generator',
